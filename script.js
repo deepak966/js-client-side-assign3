@@ -87,4 +87,34 @@ class Smoothie {
   }
 }
 
+document.getElementById('smoothieForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const customerName = document.getElementById('customerName').value.trim();
+    const sizeRadio = document.querySelector('input[name="size"]:checked');
+    const size = sizeRadio.value;
+    const basePrice = parseFloat(sizeRadio.dataset.price);
+    const base = document.getElementById('base').value;
+    const ingredientCheckboxes = document.querySelectorAll('input[name="ingredients"]:checked');
+    const ingredients = [];
+    const ingredientPrices = [];
+
+    ingredientCheckboxes.forEach(checkbox => {
+        ingredients.push(checkbox.value);
+        ingredientPrices.push(parseFloat(checkbox.dataset.price));
+    });
+
+    if(ingredients.length === 0){
+        alert("Please select at least one ingredient for your smoothie!");
+        return;
+    }
+
+    const smoothie = new Smoothie(customerName, size, basePrice, base, ingredients, ingredientPrices);
+    const orderDisplay = document.getElementById('orderDisplay');
+    orderDisplay.innerHTML = smoothie.renderHTML();
+
+    console.log('Smoothie Order Created:', smoothie);
+    console.log('Total Price:', smoothie.calculateTotal());
+    console.log('Description:', smoothie.getDescription())
+})
 
