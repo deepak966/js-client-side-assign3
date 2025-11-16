@@ -51,3 +51,20 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.form-group{
+    margin-bottom: 25px;
+}
+
+.form-group label{
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"]:focus{
+    outline: none;
+    border-color: #667eea;
+}
