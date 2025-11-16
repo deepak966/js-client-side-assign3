@@ -215,3 +215,77 @@ body{
     font-size: 5em;
     margin-bottom: 20px;
 }
+
+.smoothie-result {
+    width: 100%;
+    text-align: center;
+}
+
+.smoothie-result h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.smoothie-image {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background: linear-gradient(180deg, #ff6b6b 0%, #ff8e53 100%);
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: smoothiePulse 2s ease-in-out infinite;
+}
+
+@keyframes smoothiePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.smoothie-details {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #667eea;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.detail-value {
+    color: #666;
+}
+
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .ingredients-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .size-options {
+        flex-direction: column;
+    }
+}
