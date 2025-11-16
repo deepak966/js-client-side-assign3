@@ -101,3 +101,20 @@ body{
     background: #667eea;
     color: white;
 }
+
+/* base selection */
+.base-select{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+.base-select:focus{
+    outline: none;
+    border-color: #667eea;
+}

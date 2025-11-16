@@ -1,43 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>The Smoothie Machine</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>The Smoothie Machine</h1>
-            <p>Create your perfect smoothie blend!</p>
-        </div>
-        <div class="form-section">
-            <form id="smoothieForm">
-                <div class="form-group">
-                    <label for="customerName">Your Name</label>
-                    <input type="text" id="customerName" name="customerName" placeholder="Enter your name." required>
-                </div>
-                <div class="form-group">
-                    <label>Choose Your Size</label>
-                    <div class="size-options">
-                        <div class="size-option">
-                            <input type="radio" id="small" name="size" value="Small" data-price="3.99" required>
-                            <label for="small">Small<br>$3.99</label>
-                        </div> 
-                        <div class="size-option">
-                            <input type="radio" id="medium" name="size" value="Medium" data-price="5.99" checked>
-                            <label for="medium">Medium<br>$5.99</label>
-                        </div> 
-                        <div class="size-option">
-                            <input type="radio" id="large" name="size" value="Large" data-price="7.99">
-                            <label for="large">Large<br>$7.99</label>
-                        </div> 
-                    </div>
-                </div>
-            </form>
-        </div>
+      <div class="header">
+        <h1>The Smoothie Machine</h1>
+        <p>Create your perfect smoothie blend!</p>
+      </div>
+      <div class="form-section">
+        <form id="smoothieForm">
+          <div class="form-group">
+            <label for="customerName">Your Name</label>
+            <input
+              type="text"
+              id="customerName"
+              name="customerName"
+              placeholder="Enter your name."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Choose Your Size</label>
+            <div class="size-options">
+              <div class="size-option">
+                <input
+                  type="radio"
+                  id="small"
+                  name="size"
+                  value="Small"
+                  data-price="3.99"
+                  required
+                />
+                <label for="small">Small<br />$3.99</label>
+              </div>
+              <div class="size-option">
+                <input
+                  type="radio"
+                  id="medium"
+                  name="size"
+                  value="Medium"
+                  data-price="5.99"
+                  checked
+                />
+                <label for="medium">Medium<br />$5.99</label>
+              </div>
+              <div class="size-option">
+                <input
+                  type="radio"
+                  id="large"
+                  name="size"
+                  value="Large"
+                  data-price="7.99"
+                />
+                <label for="large">Large<br />$7.99</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="base">Choose Your Base</label>
+            <select id="base" name="base" class="base-select" required>
+              <option value="Almond Milk">Almond Milk</option>
+              <option value="Coconut Milk">Coconut Milk</option>
+              <option value="Oat Milk">Oat Milk</option>
+              <option value="Greek Yogurt">Greek Yogurt</option>
+              <option value="Orange Juice">Orange Juice</option>
+              <option value="Water">Water (Free)</option>
+            </select>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
