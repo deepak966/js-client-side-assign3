@@ -118,3 +118,11 @@ document.getElementById('smoothieForm').addEventListener('submit', function(e){
     console.log('Description:', smoothie.getDescription())
 })
 
+document.querySelectorAll('.ingredient-item').forEach(item => {
+    item.addEventListener('click', function(event) {
+        if (event.target.type !== 'checkbox') {
+            const checkbox = this.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+        }
+    });
+});
