@@ -118,3 +118,47 @@ body{
     outline: none;
     border-color: #667eea;
 }
+
+/* ingredients section */
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.ingredient-item:hover {
+    background: #f5f5f5;
+}
+
+.ingredient-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.ingredient-item input[type="checkbox"]:checked {
+    accent-color: #667eea;
+}
+
+.ingredient-item label {
+    cursor: pointer;
+    flex: 1;
+    margin: 0;
+    font-weight: normal;
+}
+
+.ingredient-price {
+    color: #667eea;
+    font-weight: 600;
+}
