@@ -68,3 +68,36 @@ body{
     outline: none;
     border-color: #667eea;
 }
+
+/* size options section */
+.size-options{
+    display: flex;
+    gap: 15px;
+}
+
+.size-option{
+    flex: 1;
+    position: relative;
+}
+
+.size-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.size-option label{
+    display: block;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition:  all 0.3;
+    background: white;
+}
+
+.size-option input[type="radio"]:checked + label {
+    border-color: #667eea;
+    background: #667eea;
+    color: white;
+}
